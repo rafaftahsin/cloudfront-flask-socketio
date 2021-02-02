@@ -62,7 +62,7 @@ nginx -t # Check if the configuration is correct
 service nginx reload
 ```
 
-- How to configure cloudfront. When you configure cloudfront cache Behavior, 2 settngs are very important.
+- How to configure cloudfront. When you configure **Cloudfront Cache Behavior**, 2 settngs are very important.
 
 1. Configure cache such a way that it forwards **`Host`** Header. To make sure it forwards *`Host`* Header, I used `Use legacy cache settings` under `Cache and origin request settings` and whitelisted *`Host`* Header.
 
@@ -71,3 +71,4 @@ service nginx reload
 2. Make sure `Query String Forwarding and Caching` forwards all query and caches based on all query string.
 
 ![Query String Forwarding and Caching Settings](Query-String-Forwarding-and-Caching.png "Query String Forwarding and Caching Settings.")
+
